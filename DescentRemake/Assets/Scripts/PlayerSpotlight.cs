@@ -5,6 +5,7 @@ public class PlayerSpotlight : MonoBehaviour {
 
     public bool on = false;
     public float battery;
+    public float maxbattery;
     
 
 	// Use this for initialization
@@ -44,9 +45,9 @@ public class PlayerSpotlight : MonoBehaviour {
             //on = !on;
         }
 
-        if(battery >= 10)
+        if(battery >= maxbattery /*10*/)
         {
-            battery = 10;
+            battery = maxbattery; /*10;*/
 
         }
 
