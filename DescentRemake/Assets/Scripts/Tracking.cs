@@ -61,7 +61,7 @@ public class Tracking : MonoBehaviour {
         float angularVelocityLimit = Mathf.Sqrt(2 * AngularAcceleration * relativeTargetRotationAngle);
 
         // Accelerate toward a point that is the relative angular position truncated to the velocity limit.
-        Vector3 angularVelocityTarget = Mathf.Min(angularVelocityLimit, relativeTargetRotationAngle) * relativeTargetRotationAxis;
+        Vector3 angularVelocityTarget = angularVelocityLimit * relativeTargetRotationAxis;
         Vector3 angularAccelerationStep = angularVelocityTarget - angularVelocity0;
         angularAccelerationStep *= Mathf.Min(1.0f, AngularAcceleration * Time.fixedDeltaTime / angularAccelerationStep.magnitude);
 

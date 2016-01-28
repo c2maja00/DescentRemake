@@ -122,7 +122,7 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         if (GetComponent<Rigidbody>())
-            GetComponent<Rigidbody>().freezeRotation = true;
+       		GetComponent<Rigidbody>().freezeRotation = true;
         originalRotation = transform.localRotation;
     }
 
