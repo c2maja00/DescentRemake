@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using System.Collections.Generic;
 
 public class NetworkManager : MonoBehaviour {
@@ -22,9 +22,9 @@ public class NetworkManager : MonoBehaviour {
     void OnDestroy()
     {
         PlayerPrefs.SetString("Username", PhotonNetwork.player.name);
-       /* Hashtable props = new Hashtable();
+        Hashtable props = new Hashtable();
         props["asddsaddsa"] = 2;
-        PhotonNetwork.player.SetCustomProperties(props);*/
+        PhotonNetwork.player.SetCustomProperties(props);
     }
 
     public void AddChatMessage(string m)
@@ -37,7 +37,7 @@ public class NetworkManager : MonoBehaviour {
     }
 	
 	void Connect(){
-		//PhotonNetwork.offlineMode = true;
+		PhotonNetwork.offlineMode = true;
 		PhotonNetwork.ConnectUsingSettings ("DescentRemake");
         
 
@@ -117,20 +117,20 @@ public class NetworkManager : MonoBehaviour {
 		SpawnSpot mySpawnSpot = spawnSpots [Random.Range (0, spawnSpots.Length)];
 		GameObject myPlayerGO = (GameObject)
 		PhotonNetwork.Instantiate ("Player", mySpawnSpot.transform.position, transform.rotation, 0);
-		//came.enabled = false;
+		came.enabled = false;
 		myPlayerGO.GetComponent<NetworkCharacterMovement> ().enabled = true;
         myPlayerGO.GetComponent<PlayerMovement> ().enabled = true;
         myPlayerGO.AddComponent<Camera>();
-        //Instantiate(gameObject.AddComponent<Camera>(), transform.position, Quaternion.identity) as Camera;
+        Instantiate(gameObject.AddComponent<Camera>(), transform.position, Quaternion.identity) as Camera;
 
-        //myPlayerGO.GetComponent<PlayerControl> ().enabled = true;
-        //myPlayerGO.GetComponentInChildren<PlayerShooting> ().enabled = true;
-        //myPlayerGO.GetComponentInChildren<PlayerHealth> ().enabled = true;
+        myPlayerGO.GetComponent<PlayerControl> ().enabled = true;
+        myPlayerGO.GetComponentInChildren<PlayerShooting> ().enabled = true;
+        myPlayerGO.GetComponentInChildren<PlayerHealth> ().enabled = true;
 
-        //GameObject.GetComponent<CameraFollow> ().enabled = true;
-        //myPlayerGO.GetComponentInChildren<CameraFollow>().enabled = true;
+        GameObject.GetComponent<CameraFollow> ().enabled = true;
+        myPlayerGO.GetComponentInChildren<CameraFollow>().enabled = true;
 
 
     }
 
-}
+}*/
